@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PAGE id='SSR_CLSRCH_RSLT'><GENSCRIPT id='onloadScript'><![CDATA[
+ g_bAccessibilityMode=false;
+var actn='';
+var oWin=window;
+var oDoc=document;
+actn=oDoc.win0.ICAction.value;
+oDoc.win0.ICAction.value='None';
+oDoc.win0.ICResubmit.value='0';
+oWin.nResubmit='0';
+oDoc.win0.ICStateNum.value=8;initVars_win0();
+setupTimeout2();
+]]></GENSCRIPT>
+<FIELD id='win0divPSHIDDENFIELDS'><![CDATA[<input type='hidden' name='ICType' id='ICType' value='Panel' />
+<input type='hidden' name='ICElementNum' id='ICElementNum' value='0' />
+<input type='hidden' name='ICStateNum' id='ICStateNum' value='8' />
+<input type='hidden' name='ICAction' id='ICAction' value='None' />
+<input type='hidden' name='ICSID' id='ICSID' value='REDACTED_SESSION_TOKEN=' />
+<input type='hidden' name='ICResubmit' id='ICResubmit' value='0' />
+]]></FIELD>
+<FIELD id='win0divPAGECONTAINER'><![CDATA[
+<DIV id='win0divDERIVED_CLSRCH_SSS_PAGE_KEYDESCR'><span class='PSEDITBOX_DISPONLY' fn="SSS_PAGE_KEYDESCR" id='DERIVED_CLSRCH_SSS_PAGE_KEYDESCR' >University of Calgary | Fall 2026</span>
+</DIV>
+<DIV id='win0divDERIVED_CLSRCH_SSR_CLSRCH_CRIT'><div style="width:552px; " >
+<table class="PSEDITBOX_DISPONLY"><tr><td>The following classes match your search criteria Course Subject: <strong>Greek and Roman Studies</strong>,&nbsp;&nbsp;Course Number contains '<strong>211</strong>',&nbsp;&nbsp;Show Open Classes Only: <strong>No</strong></td></tr></table>
+</div>
+</DIV>
+<DIV id='win0divDERIVED_REGFRM1_SSR_WAIT_LIST_ON'>
+<DIV id='win0div$ICField2'><img src=https://csprd.my.ucalgary.ca/cs/csprd/cache86208/PS_CS_STATUS_OPEN_ICN_1.gif width='16' height='16' alt='Open' title='Open' class='PSSTATICIMAGE' />
+</DIV>
+<DIV id='win0div$ICField4'><img src=https://csprd.my.ucalgary.ca/cs/csprd/cache86208/PS_CS_STATUS_CLOSED_ICN_1.gif width='16' height='16' alt='Closed' title='Closed' class='PSSTATICIMAGE' />
+</DIV>
+<DIV id='win0div$ICField6'><img src=https://csprd.my.ucalgary.ca/cs/csprd/cache86208/PS_CS_STATUS_WAITLIST_ICN_1.JPG width='18' height='18' alt='Wait List' title='Wait List' class='PSSTATICIMAGE' />
+</DIV>
+</DIV>
+<DIV id='win0divSSR_CLSRSLT_WRK_GROUPBOX1'><table cellpadding='2' cellspacing='0' cols='1' class='PSGROUPBOXWBO' width='688'>
+<tr><td class='PSGROUPBOXLABEL' align='left'>1 class section(s) found</td></tr>
+</table>
+</DIV>
+<DIV id='win0divSSR_CLSRSLT_WRK_GROUPBOX2GP$0'><a class='PSHYPERLINK PTCOLLAPSE_ARROW' title='Collapse section GRST  211 - Technical Terms of Medicine and the Life Sciences' name='SSR_CLSRSLT_WRK_GROUPBOX2$0' id='SSR_CLSRSLT_WRK_GROUPBOX2$0' tabindex='403' href="javascript:submitAction_win0(document.win0,'SSR_CLSRSLT_WRK_GROUPBOX2$0');" aria-expanded='true' role='button'><img src='https://csprd.my.ucalgary.ca/cs/csprd/cache86208/PT_TRANS_PIX_1.png' class='PTCOLLAPSE' alt='GRST  211 - Technical Terms of Medicine and the Life Sciences Collapsible section' border='0' /></a>&nbsp;GRST  211 - Technical Terms of Medicine and the Life Sciences&nbsp;</DIV>
+<table cellspacing='0' class='PSLEVEL1GRIDNBONBO' id='SSR_CLSRCH_MTG1$scroll$0' dir='ltr' cols='12' width='960' cellpadding='2'>
+<tr>
+<th scope='col' width='30' align='left' class='PSLEVEL1GRIDCOLUMNHDR PSGRIDFIRSTCOLUMN' >Class</th>
+<th scope='col' width='80' align='left' class='PSLEVEL1GRIDCOLUMNHDR' >Section</th>
+<th scope='col' width='41' align='left' class='PSLEVEL1GRIDCOLUMNHDR' >Status</th>
+</tr>
+<tr id='trSSR_CLSRCH_MTG1$0_row1' bufnum='0' valign='center'>
+<td align='left' height='22' class='PSLEVEL3GRIDODDROW PSGRIDFIRSTCOLUMN' >
+<DIV id='win0divMTG_CLASS_NBR$0'><span id='MTG_CLASS_NBR$span$0' class='PSHYPERLINK' title='Class Nbr' ><a name='MTG_CLASS_NBR$0' id='MTG_CLASS_NBR$0' ptlinktgt='pt_peoplecode' tabindex='451' onclick='javascript:cancelBubble(event);' href="javascript:submitAction_win0(document.win0,'MTG_CLASS_NBR$0');" class='PSHYPERLINK' >71003</a></span></DIV></td>
+<td class='PSLEVEL3GRIDODDROW' align='left' >
+<DIV id='win0divMTG_CLASSNAME$0'><span id='MTG_CLASSNAME$span$0' class='PSHYPERLINK' title='View Details' ><a name='MTG_CLASSNAME$0' id='MTG_CLASSNAME$0' ptlinktgt='pt_peoplecode' tabindex='452' onclick='javascript:cancelBubble(event);' href="javascript:submitAction_win0(document.win0,'MTG_CLASSNAME$0');" class='PSHYPERLINK' >01-LEC<br />
+Regular</a></span></DIV></td>
+<td class='PSLEVEL3GRIDODDROW' align='left' >
+<DIV id='win0divDERIVED_CLSRCH_SSR_STATUS_LONG$0'><div style="min-width:41px; " >
+<img src="https://csprd.my.ucalgary.ca/cs/csprd/cache86208/PS_CS_STATUS_CLOSED_ICN_1.gif" width="16" height="16" alt="Closed" STYLE="vertical-align:middle;text-align:center;margin-left:12px">
+</div>
+</DIV></td>
+</tr>
+</table>
+]]></FIELD>
+</PAGE>

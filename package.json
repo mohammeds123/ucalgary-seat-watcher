@@ -1,0 +1,20 @@
+{
+  "name": "ucalgary-seat-watcher",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Watches UCalgary course seat availability and alerts when a seat opens.",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "dependencies": {
+    "zod": "^3.24.1"
+  }
+}

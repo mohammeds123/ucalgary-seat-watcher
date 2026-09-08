@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.output/
+.wxt/
+*.log
+
+# Raw, unscrubbed captures from a real session. These contain PS_TOKEN,
+# PSJSESSIONID and cf_clearance. They must never be committed.
+# Run scripts/scrub-fixture.ts and commit the result under tests/fixtures/.
+captures/
+*.raw.xml
+*.raw.txt
+*.har

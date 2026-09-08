@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PAGE id='SSR_CLSRCH_RSLT'><GENSCRIPT id='onloadScript'><![CDATA[
+oDoc.win0.ICStateNum.value=12;initVars_win0();
+]]></GENSCRIPT>
+<FIELD id='win0divPSHIDDENFIELDS'><![CDATA[<input type='hidden' name='ICStateNum' id='ICStateNum' value='12' />
+<input type='hidden' name='ICSID' id='ICSID' value='REDACTED_SESSION_TOKEN=' />
+]]></FIELD>
+<FIELD id='win0divPAGECONTAINER'><![CDATA[
+<DIV id='win0divDERIVED_REGFRM1_SSR_WAIT_LIST_ON'>
+<DIV id='win0div$ICField2'><img src=.../PS_CS_STATUS_OPEN_ICN_1.gif alt='Open' class='PSSTATICIMAGE' /></DIV>
+<DIV id='win0div$ICField4'><img src=.../PS_CS_STATUS_CLOSED_ICN_1.gif alt='Closed' class='PSSTATICIMAGE' /></DIV>
+<DIV id='win0div$ICField6'><img src=.../PS_CS_STATUS_WAITLIST_ICN_1.JPG alt='Wait List' class='PSSTATICIMAGE' /></DIV>
+</DIV>
+<DIV id='win0divSSR_CLSRSLT_WRK_GROUPBOX1'><table><tr><td class='PSGROUPBOXLABEL'>3 class section(s) found</td></tr></table></DIV>
+
+<DIV id='win0divMTG_CLASS_NBR$0'><span class='PSHYPERLINK'><a name='MTG_CLASS_NBR$0' id='MTG_CLASS_NBR$0' href="javascript:submitAction_win0(document.win0,'MTG_CLASS_NBR$0');" class='PSHYPERLINK' >71003</a></span></DIV>
+<DIV id='win0divMTG_CLASSNAME$0'><span class='PSHYPERLINK'><a name='MTG_CLASSNAME$0' id='MTG_CLASSNAME$0' class='PSHYPERLINK' >01-LEC<br />
+Regular</a></span></DIV>
+<DIV id='win0divDERIVED_CLSRCH_SSR_STATUS_LONG$0'><div style="min-width:41px;">
+<img src="https://csprd.my.ucalgary.ca/cs/csprd/cache86208/PS_CS_STATUS_CLOSED_ICN_1.gif" alt="Closed">
+</div></DIV>
+
+<DIV id='win0divMTG_CLASS_NBR$1'><span class='PSHYPERLINK'><a name='MTG_CLASS_NBR$1' id='MTG_CLASS_NBR$1' href="javascript:submitAction_win0(document.win0,'MTG_CLASS_NBR$1');" class='PSHYPERLINK' >71004</a></span></DIV>
+<DIV id='win0divMTG_CLASSNAME$1'><span class='PSHYPERLINK'><a name='MTG_CLASSNAME$1' id='MTG_CLASSNAME$1' class='PSHYPERLINK' >02-LEC<br />
+Regular</a></span></DIV>
+<DIV id='win0divDERIVED_CLSRCH_SSR_STATUS_LONG$1'><div style="min-width:41px;">
+<img src="https://csprd.my.ucalgary.ca/cs/csprd/cache86208/PS_CS_STATUS_OPEN_ICN_1.gif" alt="Open">
+</div></DIV>
+
+<DIV id='win0divMTG_CLASS_NBR$2'><span class='PSHYPERLINK'><a name='MTG_CLASS_NBR$2' id='MTG_CLASS_NBR$2' href="javascript:submitAction_win0(document.win0,'MTG_CLASS_NBR$2');" class='PSHYPERLINK' >71005</a></span></DIV>
+<DIV id='win0divMTG_CLASSNAME$2'><span class='PSHYPERLINK'><a name='MTG_CLASSNAME$2' id='MTG_CLASSNAME$2' class='PSHYPERLINK' >03-TUT<br />
+Regular</a></span></DIV>
+<DIV id='win0divDERIVED_CLSRCH_SSR_STATUS_LONG$2'><div style="min-width:41px;">
+<img src="https://csprd.my.ucalgary.ca/cs/csprd/cache86208/PS_CS_STATUS_WAITLIST_ICN_1.JPG" alt="Wait List">
+</div></DIV>
+]]></FIELD>
+</PAGE>

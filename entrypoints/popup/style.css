@@ -1,0 +1,157 @@
+:root {
+  color-scheme: light dark;
+  --bg: #ffffff;
+  --fg: #16181d;
+  --muted: #6b7280;
+  --line: #e5e7eb;
+  --open: #15803d;
+  --open-bg: #dcfce7;
+  --closed: #b91c1c;
+  --closed-bg: #fee2e2;
+  --wait: #b45309;
+  --wait-bg: #fef3c7;
+  --accent: #b91c1c;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #16181d;
+    --fg: #e8eaed;
+    --muted: #9aa0a6;
+    --line: #2c2f36;
+    --open-bg: #10331f;
+    --open: #4ade80;
+    --closed-bg: #3a1a1a;
+    --closed: #f87171;
+    --wait-bg: #3a2c12;
+    --wait: #fbbf24;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 340px;
+  background: var(--bg);
+  color: var(--fg);
+  font:
+    13px/1.5 system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+h1 {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.tier {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.label {
+  font-weight: 500;
+}
+
+.sub {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.status {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.status.open {
+  color: var(--open);
+  background: var(--open-bg);
+}
+
+.status.closed {
+  color: var(--closed);
+  background: var(--closed-bg);
+}
+
+.status.waitlist {
+  color: var(--wait);
+  background: var(--wait-bg);
+}
+
+.status.unknown {
+  color: var(--muted);
+  background: var(--line);
+}
+
+.empty {
+  padding: 24px 14px;
+  text-align: center;
+  color: var(--muted);
+}
+
+footer {
+  display: flex;
+  gap: 8px;
+  padding: 10px 14px;
+}
+
+button {
+  flex: 1;
+  font: inherit;
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--fg);
+  cursor: pointer;
+}
+
+button:hover {
+  border-color: var(--muted);
+}
+
+button.danger {
+  color: #fff;
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.gate {
+  padding: 8px 14px;
+  font-size: 11px;
+  color: var(--muted);
+  background: var(--wait-bg);
+  border-bottom: 1px solid var(--line);
+}

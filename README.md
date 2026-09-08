@@ -27,25 +27,40 @@ unpublished purge date, or an unknown waitlist state all mean "don't enrol".
 
 ## Status
 
-Early. The domain core and the PeopleSoft protocol layer are built and tested; the browser
-extension shell is not yet.
+The logic is built and tested; the extension builds and loads. Nothing has been run against
+the live portal yet.
 
 | Piece | State |
 |---|---|
 | Purge gate (`domain/purge.ts`) | ✅ built, tested |
 | Term codes (`domain/terms.ts`) | ✅ built, tested |
 | Transition detection (`domain/transitions.ts`) | ✅ built, tested |
+| Adaptive cadence (`domain/schedule.ts`) | ✅ built, tested |
 | Class Search parser (`peoplesoft/parse.ts`) | ✅ built, tested against a real capture |
 | Session state machine (`peoplesoft/session.ts`) | ✅ built, tested |
+| Poll orchestration (`watcher.ts`) | ✅ built, tested |
+| Extension shell, popup, options | ✅ builds; **not yet run in Chrome** |
+| Desktop + ntfy alerting | ✅ written; **not yet fired for real** |
 | Class Detail parser (seat numbers) | ⬜ needs a capture |
-| Extension shell, alerting, UI | ⬜ |
+| Assist mode (pre-fill enrolment) | ⬜ stubbed — logs instead of acting |
+| Auto-enrol submit | ⬜ gate and rails exist; the submit does not |
 | Waitlist advisor | ⬜ |
 
 ```bash
 npm install
-npm test
+npm test          # 81 tests
 npm run typecheck
+npm run build     # -> .output/chrome-mv3
+npm run dev       # WXT dev server with HMR
 ```
+
+To load it: `chrome://extensions` → Developer mode → **Load unpacked** →
+`.output/chrome-mv3`. Sign in to my.ucalgary.ca first; the extension has no login of its own
+and polls using the session you already hold.
+
+Note that assist and auto modes currently stop at the notification — the enrolment-page
+plumbing is the next piece of work. The mode selector and the purge gate around it are real
+and tested; what they gate is not built yet.
 
 ## How the portal actually works
 
@@ -95,10 +110,21 @@ normally, which is also the only way to get past SSO + MFA.
 ## Layout
 
 ```
-src/domain/       purge gate, term codes, transition detection — no I/O, no browser
+src/domain/       purge gate, term codes, transitions, cadence — no I/O, no browser
 src/peoplesoft/   the wire protocol: request building, parsing, session state machine
+src/watcher.ts    poll orchestration; decides notify vs assist vs auto
+src/portal.ts     binds the protocol layer to fetch + the user's session
+entrypoints/      background worker, offscreen timer, popup, options
 tests/fixtures/   scrubbed real responses
 ```
 
-The `src/domain` code is deliberately free of browser and network dependencies so the rules
-that matter can be tested exhaustively without a portal.
+`src/domain` and `src/watcher.ts` are deliberately free of browser and network dependencies —
+every dependency is injected — so the rules that matter can be tested exhaustively without a
+portal. `Watcher` takes a `SearchFn`; the tests hand it scripted responses.
+
+### Why an offscreen document
+
+MV3 service workers are torn down after ~30s idle and `chrome.alarms` will not fire faster
+than every 30s, so neither can sustain a 10–20s poll. The offscreen document holds the real
+timer (and gives us an audio context for the alert sound, which a service worker cannot have).
+A 30s alarm acts as a resurrection heartbeat if both get torn down.

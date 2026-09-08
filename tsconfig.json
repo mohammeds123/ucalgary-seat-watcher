@@ -1,19 +1,16 @@
 {
+  "extends": "./.wxt/tsconfig.json",
   "compilerOptions": {
-    "target": "ES2022",
-    "lib": ["ES2022", "DOM"],
-    "module": "ESNext",
-    "moduleResolution": "bundler",
-    "strict": true,
-    "noUncheckedIndexedAccess": true,
-    "noImplicitOverride": true,
+    "jsx": "react-jsx",
     "exactOptionalPropertyTypes": true,
-    "verbatimModuleSyntax": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
     "resolveJsonModule": true,
-    "noEmit": true,
-    "types": ["node", "vitest/globals"]
+    "types": ["node", "chrome", "vitest/globals"]
   },
-  "include": ["src", "tests", "*.config.ts"]
+  "include": [
+    "src",
+    "tests",
+    "entrypoints",
+    "*.config.ts",
+    ".wxt/wxt.d.ts"
+  ]
 }
